@@ -1,0 +1,41 @@
+@import "@/scss/variables";
+
+:root {
+  // Global
+  --lexend: "Lexend", sans-serif;
+  --color: #ffffff;
+  --background: #243046;
+
+  // Header
+  --header-border: #34425b;
+  --header-nav-element-color: #7388ad;
+  --header-nav-element-color-hover: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  font-family: $lexend;
+  color: $color;
+  background: $background;
+}
+
+a {
+  text-decoration: none;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: 1200px;
+  grid-template-rows: auto 1fr auto;
+  justify-content: center;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 320px;
+  }
+}
