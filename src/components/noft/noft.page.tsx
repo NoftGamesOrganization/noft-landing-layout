@@ -89,5 +89,5 @@ export function NoftPage() {
     []
   );
 
-  return <main />;
+  return <main></main>;
 }
