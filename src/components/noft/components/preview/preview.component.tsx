@@ -3,6 +3,9 @@ import s from "./preview.module.scss";
 import clsx from "clsx";
 import { Link } from "react-router-dom";
 
+import PreviewImg from "@/public/images/preview.jpg?url";
+import RankImg from "@/public/images/legendary.svg?url";
+
 export function PreviewComponent() {
   const Preview = (
     <section className={s.preview}>
@@ -11,7 +14,7 @@ export function PreviewComponent() {
       <div className={s.previewWrapper}>
         <div className={s.previewNoft}>
           <div className={s.previewImg}>
-            <img className={s.previewImgContent} src="/images/preview.jpg" alt="#" />
+            <img className={s.previewImgContent} src={PreviewImg} alt="#" />
           </div>
           <h3 className={s.previewCaption}>Generation</h3>
           <p className={s.previewNoftValue}>halloween</p>
@@ -44,7 +47,7 @@ export function PreviewComponent() {
       <div className={s.previewWrapper}>
         <div className={s.previewRank}>
           <div className={s.previewImg}>
-            <img src="/images/legendary.svg" alt="#" width="79" height="66" />
+            <img src={RankImg} alt="#" width="79" height="66" />
           </div>
           <h3 className={s.previewCaption}>Rank</h3>
           <p className={s.previewRankValue}>MYSTICAL HERO</p>

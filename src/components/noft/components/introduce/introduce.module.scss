@@ -11,6 +11,7 @@
   margin-bottom: 30px;
 
   @media (max-width: 1225px) {
+    margin-bottom: 34px;
     flex-direction: column;
   }
 
@@ -21,7 +22,7 @@
 
     @media (max-width: 1225px) {
       margin-right: 0;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
 
     @media (max-width: 700px) {
@@ -44,10 +45,11 @@
     background-size: contain;
 
     @media (max-width: 700px) {
-      height: 280px;
+      height: 230px;
       width: 250px;
       margin-right: 0;
       margin: 0 auto;
+      margin-bottom: 28px;
     }
 
     & img {
@@ -86,6 +88,7 @@
       justify-content: flex-end;
       margin-top: 15px;
       @media (max-width: 1225px) {
+        margin-top: 30px;
         justify-content: flex-start;
       }
     }
