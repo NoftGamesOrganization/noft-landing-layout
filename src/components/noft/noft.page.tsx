@@ -1,4 +1,12 @@
 import { useMemo } from "react";
+import s from "./noft.module.scss";
+
+import { IntroduceComponent } from "/components/noft/components/introduce/introduce.component";
+import { PagenavComponent } from "/components/noft/components/pagenav/pagenav.component";
+import { PreviewComponent } from "/components/noft/components/preview/preview.component";
+import { LevelComponent } from "/components/noft/components/level/level.component";
+import { AbilitiesComponent } from "/components/noft/components/abilities/abilities.component";
+import { PhenotypeComponent } from "/components/noft/components/phenotype/phenotype.component";
 
 export function NoftPage() {
   const data = useMemo(
@@ -8,7 +16,7 @@ export function NoftPage() {
         owner: "0x3483809556c18c2298c7a00ec1BAca7Bdc256609",
         isRentPossible: true,
         price: 0.15,
-        generation: 5,
+        preview: 5,
         expRate: 4.9,
         growRate: 1.2,
         rank: "Mystical Hero",
@@ -89,5 +97,16 @@ export function NoftPage() {
     []
   );
 
-  return <main></main>;
+  return (
+    <main>
+      <div className={s.container}>
+        <IntroduceComponent />
+        <PagenavComponent />
+        <PreviewComponent />
+        <LevelComponent />
+        <AbilitiesComponent />
+        <PhenotypeComponent />
+      </div>
+    </main>
+  );
 }

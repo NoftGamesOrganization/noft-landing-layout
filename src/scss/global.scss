@@ -3,6 +3,8 @@
 :root {
   // Global
   --lexend: "Lexend", sans-serif;
+  --poppins: "Poppins", sans-serif;
+  --oxanium: "Oxanium", cursive;
   --color: #ffffff;
   --background: #243046;
 
@@ -74,14 +76,52 @@ a {
   }
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
 .container {
-  min-width: 320px;
+  width: 100%;
   max-width: 1440px;
   padding: 0 120px;
   margin: 0 auto;
+    
+  @media (max-width: 1250px) {
+    padding: 0 80px;
+  }
 
   @media (max-width: 980px) {
-    width: 100%;
     padding: 0 20px;
   }
 }
+
+.sectionHeading {
+  font-family: $poppins;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 39px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+}
+
+.hidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+// @media (max-width: 900px) {
+// }
+
+// @media (max-width: 620px) {
+// }
