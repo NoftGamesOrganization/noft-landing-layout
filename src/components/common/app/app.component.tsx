@@ -7,7 +7,7 @@ export function AppComponent() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<LayoutComponent />}>
+        <Route path="/noft-landing-layout/" element={<LayoutComponent />}>
           <Route index element={<NoftPage />} />
         </Route>
       </Routes>
