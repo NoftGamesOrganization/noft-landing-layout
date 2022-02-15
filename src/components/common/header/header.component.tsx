@@ -1,7 +1,7 @@
 import { useAdaptive } from "@/hooks";
 import { Link } from "react-router-dom";
 import { LogoComponent } from "../logo";
-import { BannerComponent } from "@/components/noft/banner";
+import { BannerComponent } from "/components/noft/components/banner/banner.component";
 import s from "./header.module.scss";
 import clsx from "clsx";
 
