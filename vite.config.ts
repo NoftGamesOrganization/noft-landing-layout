@@ -5,7 +5,7 @@ import path from "node:path";
 
 const config = defineConfig({
   root: "src",
-  base: "/",
+  base: "/noft-landing-layout/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
