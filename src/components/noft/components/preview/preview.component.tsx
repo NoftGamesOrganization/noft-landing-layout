@@ -24,6 +24,7 @@ export function PreviewComponent() {
           <p className={s.tooltipText}>
             Special 100 tokens dedicated to Halloween night. The mystery of the autumn 2021 holiday.
           </p>
+          <button className={s.tooltipBtn}>Close</button>
         </div>
       </div>
 
@@ -36,9 +37,9 @@ export function PreviewComponent() {
               Exp <br /> rate
             </span>
           </div>
-          <div className={clsx(s.tooltip, s.previewRateTooltip)}>
+          <div className={clsx(s.tooltip, s.previewRateTooltip, s.previewRateTooltipExp)}>
             <p className={s.tooltipText}>Multiply the initial abilities by Grow Rate to see the Noft limit</p>
-            <div className={s.tooltipWrapper}>
+            <div className={clsx(s.tooltipWrapper, s.tooltipWrapperExp)}>
               <div className={s.tooltipWrapper}>
                 <div className={s.abilitiesBar}>
                   <span className={clsx(s.abilitiesBarSegment, s.abilitiesBarSegmentColored)}></span>
@@ -53,11 +54,13 @@ export function PreviewComponent() {
                   <span className={clsx(s.abilitiesBarSegment)}></span>
                   <span className={clsx(s.abilitiesBarSegment)}></span>
                 </div>
-                <span className={s.tooltipSuptext}>x</span>
               </div>
               <div className={s.tooltipWrapper}>
+                <span className={s.tooltipSuptext}>x</span>
                 <span className={s.tooltipSuptext}>4.9</span>
                 <p>=</p>
+              </div>
+              <div className={s.tooltipWrapper}>
                 <div className={s.abilitiesBar}>
                   <span className={clsx(s.abilitiesBarSegment, s.abilitiesBarSegmentSubcolored)}></span>
                   <span className={clsx(s.abilitiesBarSegment, s.abilitiesBarSegmentSubcolored)}></span>
@@ -73,6 +76,7 @@ export function PreviewComponent() {
                 </div>
               </div>
             </div>
+            <button className={s.tooltipBtn}>Close</button>
           </div>
         </div>
 
@@ -88,7 +92,8 @@ export function PreviewComponent() {
             <p className={s.tooltipText}>
               Multiply points gained in the battle by exp rate to see how much experience Noft gets
             </p>
-            <div className={s.tooltipWrapper}>
+            {/* -------------desktop text----------- */}
+            <div className={clsx(s.tooltipWrapper, s.tooltipWrapperDesk)}>
               <div className={s.tooltipWrapper}>
                 <span className={s.tooltipSuptext}>+1.300</span>
                 <span>points</span>
@@ -98,6 +103,15 @@ export function PreviewComponent() {
                 <span>points</span>
               </div>
             </div>
+            {/* -------------мобильный текст----------- */}
+            <div className={clsx(s.tooltipWrapper, s.tooltipWrapperMobile)}>
+              <span className={s.tooltipSuptext}>+1.300</span>
+              <span>points</span>
+              <span className={clsx(s.tooltipSuptext)}>x 1.2</span>
+              <span className={clsx(s.tooltipSuptext)}>= +1.560</span>
+              <span>points</span>
+            </div>
+            <button className={s.tooltipBtn}>Close</button>
           </div>
         </div>
       </div>
@@ -143,6 +157,7 @@ export function PreviewComponent() {
               <span className={clsx(s.previewRankname)}>Mystical hero</span>
             </li>
           </ul>
+          <button className={s.tooltipBtn}>Close</button>
         </div>
       </div>
     </section>
