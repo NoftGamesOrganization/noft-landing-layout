@@ -1,5 +1,7 @@
 import s from "./abilities.module.scss";
 
+import AbilitiesImg from "@/public/images/abilities-img.jpg?url";
+
 import clsx from "clsx";
 // import { Link } from "react-router-dom";
 import { useAdaptive } from "@/hooks";
@@ -40,6 +42,7 @@ export function AbilitiesComponent() {
                   <p>
                     <span>meaning/</span>how big is size of one shot damage
                   </p>
+                  <button className={s.abilitiesBtn}>Close</button>
                 </div>
               </div>
             </div>
@@ -72,6 +75,7 @@ export function AbilitiesComponent() {
                   <p>
                     <span>meaning/</span>how big is size of one shot damage
                   </p>
+                  <button className={s.abilitiesBtn}>Close</button>
                 </div>
               </div>
             </div>
@@ -104,6 +108,7 @@ export function AbilitiesComponent() {
                   <p>
                     <span>meaning/</span>how big is size of one shot damage
                   </p>
+                  <button className={s.abilitiesBtn}>Close</button>
                 </div>
               </div>
             </div>
@@ -111,7 +116,7 @@ export function AbilitiesComponent() {
         </div>
 
         <div className={s.abilitiesImg}>
-          <img className={s.abilitiesImgContent} src="/images/abilities-img.jpg" alt="#" />
+          <img className={s.abilitiesImgContent} src={AbilitiesImg} alt="#" />
         </div>
 
         <div className={s.abilitiesBlockRight}>
@@ -143,6 +148,7 @@ export function AbilitiesComponent() {
                   <p>
                     <span>meaning/</span>how big is size of one shot damage
                   </p>
+                  <button className={s.abilitiesBtn}>Close</button>
                 </div>
               </div>
             </div>
@@ -175,6 +181,7 @@ export function AbilitiesComponent() {
                   <p>
                     <span>meaning/</span>how big is size of one shot damage
                   </p>
+                  <button className={s.abilitiesBtn}>Close</button>
                 </div>
               </div>
             </div>
@@ -207,6 +214,7 @@ export function AbilitiesComponent() {
                   <p>
                     <span>meaning/</span>how big is size of one shot damage
                   </p>
+                  <button className={s.abilitiesBtn}>Close</button>
                 </div>
               </div>
             </div>
@@ -249,6 +257,7 @@ export function AbilitiesComponent() {
                   <p>
                     <span>meaning/</span>how big is size of one shot damage
                   </p>
+                  <button className={s.abilitiesBtn}>Close</button>
                 </div>
               </div>
             </div>
@@ -282,6 +291,7 @@ export function AbilitiesComponent() {
                   <p>
                     <span>meaning/</span>how big is size of one shot damage
                   </p>
+                  <button className={s.abilitiesBtn}>Close</button>
                 </div>
               </div>
             </div>
@@ -315,6 +325,7 @@ export function AbilitiesComponent() {
                   <p>
                     <span>meaning/</span>how big is size of one shot damage
                   </p>
+                  <button className={s.abilitiesBtn}>Close</button>
                 </div>
               </div>
             </div>
@@ -350,6 +361,7 @@ export function AbilitiesComponent() {
                   <p>
                     <span>meaning/</span>how big is size of one shot damage
                   </p>
+                  <button className={s.abilitiesBtn}>Close</button>
                 </div>
               </div>
             </div>
@@ -383,6 +395,7 @@ export function AbilitiesComponent() {
                   <p>
                     <span>meaning/</span>how big is size of one shot damage
                   </p>
+                  <button className={s.abilitiesBtn}>Close</button>
                 </div>
               </div>
             </div>
@@ -416,6 +429,7 @@ export function AbilitiesComponent() {
                   <p>
                     <span>meaning/</span>how big is size of one shot damage
                   </p>
+                  <button className={s.abilitiesBtn}>Close</button>
                 </div>
               </div>
             </div>

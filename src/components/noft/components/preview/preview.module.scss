@@ -13,8 +13,8 @@
 
   @media (max-width: 880px) {
     flex-direction: column;
-    margin-top: 57px;
-    gap: 30px;
+    margin-top: 52px;
+    gap: 40px;
   }
 
   @media (max-width: 700px) {
@@ -68,6 +68,7 @@
     width: 280px;
     height: 350px;
     padding-bottom: 30px;
+    background-image: url("/public/images/preview-bg-m.svg");
   }
 }
 
@@ -84,7 +85,13 @@
   height: 330px;
   border-radius: 70px;
   
-  box-shadow: 0px 0px 50px rgba(7, 73, 200, 0.4)
+  box-shadow: 0px 0px 50px rgba(7, 73, 200, 0.4);
+
+  @media (max-width: 880px) {
+    width: 210px;
+    height: 320px;
+  }
+  
 }
 
 .previewCaption {
@@ -101,12 +108,9 @@
   line-height: 18px;
 }
 
-.previewNoftValue {}
-.previewRankValue {}
-
-
 .previewRate {
   display: flex;
+  z-index: 101;
   flex-shrink: 0;
   flex-direction: column;
 
@@ -165,6 +169,222 @@
   z-index: 100;
 }
 
+.previewRateTooltip {
+  // visibility: hidden;
+  visibility: visible;
+  width: 395px;
+  padding: 17px;
+
+  top: calc(50% - 55px);
+  right: -415px;
+
+  font-size: 12px;
+  line-height: 18px;
+
+  transition: all .2s;
+}
+
+.previewRateTooltipExp {
+  visibility: hidden;
+  @media (max-width: 1350px) {
+    padding: 35px;
+    width: 218px;
+    top: 0;
+    left: 180px;    
+  }  
+
+  @media (max-width: 880px) {
+    top: 140px;
+    left: 40px;    
+  }  
+}
+
+.previewRateTooltipGrow {
+  visibility: hidden;
+  @media (max-width: 1350px) {
+    width: 218px;
+    padding: 35px;
+    top: 0;
+    left: 180px;
+  }  
+
+  @media (max-width: 880px) {
+    top: 140px;
+    left: -120px;    
+  }  
+}
+
+.previewRateTooltipGeneration {
+  visibility: hidden;
+  width: 200px;
+  top: 80px;
+  left: -220px;
+  
+  font-size: 14px;
+  line-height: 21px;
+  
+  &::before {
+    left: 200px;
+    transform: rotate(180deg);
+  }
+
+  @media (max-width: 1350px) {
+    width: 218px;
+    top: 80px;
+    left: 60px;
+  }  
+}
+
+.previewRateTooltipRank {
+  visibility: hidden;
+  width: 235px;
+  padding: 28px 33px;
+  top: 50px;
+  right: -250px;
+  
+  font-size: 14px;
+  line-height: 21px;
+
+  &::before {
+    left: -6px;
+  }
+
+  @media (max-width: 1350px) {
+    width: 218px;
+    top: 30px;
+    right: 0;
+
+    padding: 28px;
+    font-size: 12px;
+    line-height: 18px;
+  }  
+}
+
+.previewRanklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.previewRankitem {
+  display: flex;
+  align-items: center;
+}
+
+.previewRankicon {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  padding-left: 63px;
+  background-position: right;
+  background-repeat: no-repeat;  
+
+  @media (max-width: 1350px) {   
+    padding-left: 63px;
+  }  
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: calc(50% - 5px);
+    left: 0;
+    height: 10px;    
+    clip-path: polygon(50% 0%, 85% 0, 100% 50%, 85% 100%, 15% 100%, 0 50%, 15% 0);
+  }
+  
+  &Civilian {
+    background-image: url("/public/images/tooltip-icons/civilian.svg");
+
+    &::before {
+      background-color: #0DC9CD;      
+      width: 17px;
+      @media (max-width: 1350px) {
+        width: 10px;
+      }  
+    }
+  }
+
+  &Recruit {
+    background-image: url("/public/images/tooltip-icons/recruit.svg");
+
+    &::before {
+      background-color: #A6E571;
+      width: 23px;
+      @media (max-width: 1350px) {
+        width: 21px;
+      }  
+    }
+  }
+
+  &Warrior {
+    background-image: url("/public/images/tooltip-icons/warrior.svg");
+
+    &::before {
+      background-color: #76DDF4;
+      width: 29px;
+      @media (max-width: 1350px) {
+        width: 26px;
+      }  
+    }
+  }
+
+  &Hero {
+    background-image: url("/public/images/tooltip-icons/hero.svg");
+
+    &::before {
+      background-color: #E38DBB;
+      width: 35px;
+      @media (max-width: 1350px) {
+        width: 32px;
+      }  
+    }
+  }
+
+  &Legendary {
+    background-image: url("/public/images/tooltip-icons/legendary.svg");
+
+    &::before {
+      background-color: #F4DD76;
+      width: 36px;
+      @media (max-width: 1350px) {
+        width: 33px;
+      }  
+    }
+  }
+
+  &Mystical {
+    background-image: url("/public/images/tooltip-icons/mystical.svg");
+
+    &::before {
+      background-color: #F6412D;
+      width: 44px;
+      @media (max-width: 1350px) {
+        width: 40px;
+      }  
+    }
+  }
+}
+
+.previewRankname {
+  font-size: 14px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+
+.previewWrapperNoft:hover .previewRateTooltipGeneration,
+.previewWrapperRank:hover .previewRateTooltipRank {
+  visibility: visible;
+}
+
+.previewWrapperExp:hover .previewRateTooltip,
+.previewWrapperRank:hover .previewRateTooltip {
+  visibility: visible;
+}
+
 .previewShadow {
   position: absolute;
 
@@ -179,6 +399,15 @@
   height: 155px;
   border-radius: 45%;
   box-shadow: 0px 0px 50px rgba(113, 26, 198, 0.6);
+
+  @media (max-width: 880px) {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.previewShadowExp {
+  box-shadow: 0px 0px 50px rgba(232, 150, 86, 0.6);
 }
 
 .previewWrapper:hover .previewShadow,
@@ -205,5 +434,33 @@
   @media (max-width: 880px) {
     font-size: 14px;
     line-height: 21px;  
+  }
+}
+
+// ------------стилизация молосы прогрессии
+
+.preview .abilitiesBar {
+  display: flex;
+  margin-top: 0;
+  gap: 5px;
+
+  &Segment {
+    width: 8px;
+    height: 10px;
+    background-color: #283650;
+    transform: skew(-30deg, 0);
+
+    &Colored {
+      background-color: #FF7A00;
+    }
+
+    &Subcolored {
+      background-color: rgba(255, 122, 0, 0.3);
+    }
+
+    @media (max-width: 640px) {
+      width: 6px;
+      height: 10px;
+    }  
   }
 }

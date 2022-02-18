@@ -1,9 +1,8 @@
 // import { useAdaptive } from "@/hooks";
 import s from "./banner.module.scss";
-import clsx from "clsx";
-
 import { Link } from "react-router-dom";
 import { ReactComponent as BannerLogo } from "@/public/images/banner-img.svg";
+import clsx from "clsx";
 
 export function BannerComponent() {
   const Banner = (

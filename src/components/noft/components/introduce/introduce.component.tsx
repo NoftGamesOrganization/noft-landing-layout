@@ -5,6 +5,8 @@ import { useAdaptive } from "@/hooks";
 import { OfferComponent } from "/components/noft/components/offer/offer.component";
 import { Link } from "react-router-dom";
 
+import AvatarImg from "@/public/images/avatar-img.svg?url";
+
 export function IntroduceComponent() {
   const isMobile = useAdaptive("700px");
 
@@ -46,7 +48,7 @@ export function IntroduceComponent() {
             noft<span className={s.introduseId}>#1007</span>
           </h1>
           <div className={s.introduceAvatar}>
-            <img src="/images/avatar-img.svg" alt="#" />
+            <img src={AvatarImg} alt="#" />
           </div>
           <div className={s.introduceWrapper}>
             <span className={s.introduceSupporttext}>OWNER:</span>

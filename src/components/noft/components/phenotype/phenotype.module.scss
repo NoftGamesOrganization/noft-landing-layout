@@ -46,23 +46,6 @@
     background-image: url("/public/images/phenotype/phenotype-bg-m.svg");     
   }  
 
-  &Inborder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 98px;
-    height: 86px;
-    border-radius: 10px;
-    background-color: #283650;
-    border: 3px solid #376FDC;
-    box-shadow: 0px 0px 20px rgba(13, 201, 205, 0.5);
-
-    @media (max-width: 1440px) {   
-      width: 77px;
-      height: 65px;
-    }  
-  }
-
   &Content {
     position: relative;
     width: 65px;
@@ -108,7 +91,7 @@
   color: #7388AD;
 
   @media (max-width: 1200px) {   
-    margin-top: 18px;
+    margin-top: 23px;
   }  
 
   @media (max-width: 640px) {   
