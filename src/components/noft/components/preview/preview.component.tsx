@@ -16,7 +16,10 @@ export function PreviewComponent() {
   const Preview = (
     <section className={s.preview}>
       <h2 className={clsx(s.sectionHeading, s.hidden)}>preview</h2>
-      <div className={clsx(s.previewWrapper, s.previewWrapperNoft)} onClick={() => setModalGen(!modalGen)}>
+      <div
+        className={clsx(s.previewWrapper, s.previewWrapperNoft)}
+        onClick={() => setModalGen(!modalGen, (document.body.style.overflow = "hidden"))}
+      >
         <div className={s.previewNoft}>
           <div className={s.previewImg}>
             <img className={s.previewImgContent} src={PreviewImg} alt="#" />
@@ -31,7 +34,10 @@ export function PreviewComponent() {
       </div>
 
       <div className={clsx(s.previewRate)}>
-        <div className={clsx(s.previewWrapper, s.previewWrapperExp)} onClick={() => setModalExp(!modalExp)}>
+        <div
+          className={clsx(s.previewWrapper, s.previewWrapperExp)}
+          onClick={() => setModalExp(!modalExp, (document.body.style.overflow = "hidden"))}
+        >
           <div className={clsx(s.previewShadow, s.previewShadowExp)}></div>
           <div className={s.previewExp}>
             <span className={s.previewValue}>4.9</span>
@@ -81,7 +87,10 @@ export function PreviewComponent() {
           </div>
         </div>
 
-        <div className={clsx(s.previewWrapper, s.previewWrapperRank)} onClick={() => setModalGrow(!modalGrow)}>
+        <div
+          className={clsx(s.previewWrapper, s.previewWrapperRank)}
+          onClick={() => setModalGrow(!modalGrow, (document.body.style.overflow = "hidden"))}
+        >
           <div className={s.previewShadow}></div>
           <div className={s.previewGrow}>
             <span className={s.previewValue}>4.9</span>
@@ -116,7 +125,10 @@ export function PreviewComponent() {
         </div>
       </div>
 
-      <div className={clsx(s.previewWrapper, s.previewWrapperRank)} onClick={() => setModalRank(!modalRank)}>
+      <div
+        className={clsx(s.previewWrapper, s.previewWrapperRank)}
+        onClick={() => setModalRank(!modalRank, (document.body.style.overflow = "hidden"))}
+      >
         <div className={s.previewRank}>
           <div className={s.previewImg}>
             <img src={RankImg} alt="#" width="79" height="66" />
@@ -164,7 +176,7 @@ export function PreviewComponent() {
 
       <div
         className={clsx(s.previewModal, modalGen ? s.previewModalClose : s.previewModalOpen)}
-        onClick={() => setModalGen(!modalGen)}
+        onClick={() => setModalGen(!modalGen, (document.body.style.overflow = ""))}
       >
         <div className={clsx(s.previewModalContent)}>
           <p className={clsx(s.previewModalText)} onClick="event.stopPropagation()">
@@ -178,7 +190,7 @@ export function PreviewComponent() {
 
       <div
         className={clsx(s.previewModal, modalRank ? s.previewModalClose : s.previewModalOpen)}
-        onClick={() => setModalRank(!modalRank)}
+        onClick={() => setModalRank(!modalRank, (document.body.style.overflow = ""))}
       >
         <div className={clsx(s.previewModalContent)}>
           <ul className={clsx(s.previewRanklist)} onClick="event.stopPropagation()">
@@ -220,7 +232,7 @@ export function PreviewComponent() {
 
       <div
         className={clsx(s.previewModal, modalExp ? s.previewModalClose : s.previewModalOpen)}
-        onClick={() => setModalExp(!modalExp)}
+        onClick={() => setModalExp(!modalExp, (document.body.style.overflow = ""))}
       >
         <div className={clsx(s.previewModalContent)}>
           <p className={s.tooltipText} onClick="event.stopPropagation()">
@@ -271,7 +283,7 @@ export function PreviewComponent() {
 
       <div
         className={clsx(s.previewModal, modalGrow ? s.previewModalClose : s.previewModalOpen)}
-        onClick={() => setModalGrow(!modalGrow)}
+        onClick={() => setModalGrow(!modalGrow, (document.body.style.overflow = ""))}
       >
         <div className={clsx(s.previewModalContent)}>
           <p className={s.tooltipText} onClick="event.stopPropagation()">
