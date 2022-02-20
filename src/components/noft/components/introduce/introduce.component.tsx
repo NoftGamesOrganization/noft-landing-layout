@@ -32,7 +32,7 @@ export function IntroduceComponent() {
         <OfferComponent />
         <div className={clsx(s.introduseWrapper, s.introduceWrapperOffer)}>
           <span className={s.introduceText}>Available for rent</span>
-          <Link to="#" className={s.introduceLink}>
+          <Link to="https://noftgames.io/battles" className={s.introduceLink}>
             free
           </Link>
         </div>

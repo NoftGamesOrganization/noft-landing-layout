@@ -48,7 +48,7 @@
 .previewNoft,
 .previewRank {  
   position: relative;
-  z-index: 100;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -110,7 +110,7 @@
 
 .previewRate {
   display: flex;
-  z-index: 101;
+  z-index: 20;
   flex-shrink: 0;
   flex-direction: column;
 
@@ -166,12 +166,11 @@
 
 .previewWrapper {
   position: relative;
-  z-index: 100;
+  z-index: 1;
 }
 
 .previewRateTooltip {
-  // visibility: hidden;
-  visibility: visible;
+  visibility: hidden;
   width: 395px;
   padding: 17px;
 
@@ -185,7 +184,6 @@
 }
 
 .previewRateTooltipExp {
-  visibility: hidden;
   @media (max-width: 1350px) {
     padding: 35px;
     width: 218px;
@@ -200,7 +198,6 @@
 }
 
 .previewRateTooltipGrow {
-  visibility: hidden;
   @media (max-width: 1350px) {
     width: 218px;
     padding: 35px;
@@ -230,8 +227,8 @@
 
   @media (max-width: 1350px) {
     width: 218px;
-    top: 80px;
-    left: 60px;
+    top: 95px;
+    left: -66px;
   }  
 }
 
@@ -251,8 +248,8 @@
 
   @media (max-width: 1350px) {
     width: 218px;
-    top: 30px;
-    right: 0;
+    top: 45px;
+    right: -60px;
 
     padding: 28px;
     font-size: 12px;
@@ -373,6 +370,11 @@
   font-size: 14px;
   line-height: 21px;
   color: #FFFFFF;
+
+  @media (max-width: 1000px) {
+    font-size: 12px;
+    line-height: 18px;
+  }
 }
 
 .previewWrapperNoft:hover .previewRateTooltipGeneration,
@@ -462,5 +464,63 @@
       width: 6px;
       height: 10px;
     }  
+  }
+}
+
+.previewModal {
+  display: none;
+    @media (max-width: 1000px) {
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 111;
+    top: 0;
+    left: 0;
+    background: rgba(24, 33, 50, 0.3);
+    backdrop-filter: blur(10px);
+    width: 100vw;
+    height: 100vh;
+
+    &Open {display: flex;}
+
+    &Content {
+      width: 218px;
+      background: #2E3E5A;
+      color: #BED0EF;
+      font-size: 12px;
+      line-height: 18px;
+      padding: 34px;
+    }
+
+    &Btn {
+      display: none;
+      @media (max-width: 1000px) {
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 30px;
+        border-radius: 5px;
+        width: 100%;
+        min-height: 43px;
+        background-color: #415679;
+        border: none;
+
+        font-family: $lexend;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color: #FFFFFF;
+        text-transform: uppercase;
+
+        transition: all .2s;
+
+        &:hover {
+          transform: scale(1.01);
+          box-shadow: 0px 0px 32px -5px rgba(0,0,0,0.3);
+        }
+      }
+    }
   }
 }
