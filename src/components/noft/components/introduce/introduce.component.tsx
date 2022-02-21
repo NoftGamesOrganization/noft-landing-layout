@@ -14,7 +14,7 @@ export function IntroduceComponent() {
     <section className={s.introduce}>
       <div className={s.introduceCard}>
         <div className={s.introduceAvatar}>
-          <img src="/images/avatar-img.svg" alt="#" />
+          <img src={AvatarImg} alt="#" />
         </div>
         <div className={s.introduceData}>
           <h1 className={s.introduceName}>
@@ -32,7 +32,7 @@ export function IntroduceComponent() {
         <OfferComponent />
         <div className={clsx(s.introduseWrapper, s.introduceWrapperOffer)}>
           <span className={s.introduceText}>Available for rent</span>
-          <Link to="#" className={s.introduceLink}>
+          <Link to="https://noftgames.io/battles" className={s.introduceLink}>
             free
           </Link>
         </div>

@@ -1,4 +1,6 @@
 import { useAdaptive } from "@/hooks";
+import React, { useState } from "react";
+
 import { Link } from "react-router-dom";
 import { LogoComponent } from "../logo";
 import { BannerComponent } from "/components/noft/components/banner/banner.component";
@@ -68,11 +70,13 @@ export function HeaderComponent() {
     </header>
   );
 
+  const [toggle, setToggle] = useState(false);
+
   const Mobile = (
     <header className={s.header}>
       <div className={clsx(s.headerBlock, s.container)}>
         <LogoComponent />
-        <div className={s.headerMenu}>
+        <div className={clsx(s.headerMenu, toggle ? s.headerMenuOpen : s.headerMenuClose)}>
           <nav className={s.headerNav}>
             <Link to="//noftgames.io/marketplace" className={s.headerNavElement}>
               Marketplace
@@ -126,7 +130,7 @@ export function HeaderComponent() {
             </Link>
           </div>
         </div>
-        <div className={s.headerToggle}></div>
+        <div className={s.headerToggle} onClick={() => setToggle(!toggle)}></div>
       </div>
 
       <div className={clsx(s.container)}>
