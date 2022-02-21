@@ -263,7 +263,7 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 15px;
 }
 
 .previewRankitem {
@@ -497,7 +497,7 @@
       display: none;
       @media (max-width: 1000px) {
         display: flex;
-        margin-top: 20px;
+        margin-top: 30px;
         align-items: center;
         justify-content: center;
         padding: 10px 30px;
