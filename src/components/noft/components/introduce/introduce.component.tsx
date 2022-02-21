@@ -14,7 +14,7 @@ export function IntroduceComponent() {
     <section className={s.introduce}>
       <div className={s.introduceCard}>
         <div className={s.introduceAvatar}>
-          <img src="/images/avatar-img.svg" alt="#" />
+          <img src={AvatarImg} alt="#" />
         </div>
         <div className={s.introduceData}>
           <h1 className={s.introduceName}>
