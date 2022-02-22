@@ -56,7 +56,7 @@
   flex-shrink: 0;
   width: 285px;
   height: 360px;
-  padding-bottom: 43px;
+  padding-bottom: 44px;
   border-radius: 30px;
 
   transition: all .2s;
@@ -66,8 +66,8 @@
 
   @media (max-width: 880px) {
     width: 280px;
-    height: 350px;
-    padding-bottom: 30px;
+    height: 350px;    
+    padding-bottom: 43px;
     background-image: url("/public/images/preview-bg-m.svg");
   }
 }
@@ -264,6 +264,10 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+
+  @media (max-width: 1350px) {   
+    margin-bottom: 20px;
+  }  
 }
 
 .previewRankitem {
@@ -290,16 +294,19 @@
     top: calc(50% - 5px);
     left: 0;
     height: 10px;    
-    clip-path: polygon(50% 0%, 85% 0, 100% 50%, 85% 100%, 15% 100%, 0 50%, 15% 0);
+    clip-path: polygon(50% 0%, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%, 10% 0);
   }
   
   &Civilian {
-    background-image: url("/public/images/tooltip-icons/civilian.svg");
-
+    background-image: url("/public/images/tooltip-icons/civilian.svg");    
+    
     &::before {
-      background-color: #0DC9CD;      
+      clip-path: polygon(50% 0%, 83% 0, 100% 50%, 83% 100%, 17% 100%, 0 50%, 17% 0);
+      // background-color: #0DC9CD;      
+      background-color:  #E7E7E7;
       width: 17px;
-      @media (max-width: 1350px) {
+      @media (max-width: 1350px) {        
+        clip-path: polygon(50% 0%, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
         width: 10px;
       }  
     }
@@ -497,7 +504,7 @@
       display: none;
       @media (max-width: 1000px) {
         display: flex;
-        margin-top: 30px;
+        margin-top: 10px;
         align-items: center;
         justify-content: center;
         padding: 10px 30px;
