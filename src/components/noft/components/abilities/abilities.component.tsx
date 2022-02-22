@@ -407,8 +407,8 @@ export function AbilitiesComponent() {
                 <div className={s.abilitiesAdvice}>
                   <div className={s.abilitiesAdviceContent}>
                     <p>
-                      <span>meaning/</span>Meaning/how fast is rotation and attack, how big is the angle of detection
-                      and dodge chance
+                      <span>meaning/</span>how fast is rotation and attack, how big is the angle of detection and dodge
+                      chance
                     </p>
                     <button className={s.abilitiesBtn}>Close</button>
                   </div>
